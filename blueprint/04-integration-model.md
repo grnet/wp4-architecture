@@ -8,5 +8,9 @@ Modularity, standardization, versioning.
 - Presentation & verification
 - Revocation and status checking
 
+### 4.2.1 General PID issuing process
+
+
+
 ## 4.3 Interfaces and Protocols
 List of integration points that will be formalized in Conformance Specifications.
