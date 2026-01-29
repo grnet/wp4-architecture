@@ -39,9 +39,9 @@ This chapter describes the general PID issuing process in a sequence diagram.
 25) Optional: User accepts the PID in the Wallet App
 26) In some cases the PID can be stored server-side (Wallet Provider)
 
-![General PID issuing process ](04-images/PID-issuing.png "PID Issuing")
+![General PID issuing process ](04-files/PID-issuing.png "PID Issuing")
 
-PlantUML macro [here](04-images/plantuml_export.puml).
+PlantUML macro [here](04-files/plantuml_export.puml).
 
 ### 4.2.2 Examples for Wallet and PID Lifecycle in Germany
 This chapter shows examples from the German EUDI Wallet in sequence diagrams for
