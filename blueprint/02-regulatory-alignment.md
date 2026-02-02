@@ -10,8 +10,6 @@ EBW Proposal: COM(2025) 838 proposal. Explain that the EBW is intended for econo
 ARF
 Standardisation work -->
 
-### Revocation Mandate
-Our implementation of identity revocation is anchored in Regulation (EU) 2024/1183 Article 5 that sets the legal baseline for personal identification data (PID) revocation. Similarly, the European Business Wallet (EBW) proposal extends these trust requirements to legal entities. These regulations ensure that when a identity is no longer valid or secure, it is removed from the ecosystem immediately
 
 ## Architectural Principles
 - **Interoperability:** This is our primary goal, ensuring that different wallet providers, issuers, and verifiers can communicate seamlessly across borders and different sectors. 
