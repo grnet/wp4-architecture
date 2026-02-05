@@ -4,7 +4,7 @@
 The EU digital identity and EU business wallet ecosystem is an instance of the 3 party model for verifiable digital credentials (VDCs). In this model there are 4 main actors:
 1. The holder, aka the identity wallet that is controlled by a data subject (either a natural or legal person)
 2. The isssuer that relies on authentic sources of information to issue VDCs to the holder/wallet
-3. The verifier that recieves verifiable digital credential presentaions (VDPs) based on information present in VDCs from the holder/wallet.
+3. The verifier receives an attestation based on information present in the wallet.
 4. The trust framework that in the EU ecosystems is based on ETSI TS 119604/119612 aka trust status lists populated by trust status providers that for some use cases are QTSPs
 
 The EU ecosystem for the natural person wallet is described in more detail in [ARF]. The corresponding document for the EU legal person wallet is in progress.
