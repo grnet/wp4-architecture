@@ -20,6 +20,17 @@ graph LR;
   verifier-->trust;
   holder-->trust;
 ```
+In the WE BUILD project the focus is primarily on wallets for legal entities. In this case the regulation includes the use of qualified electronic registered delivery services to enable messaging services between entities in the ecosystem. The diagram changes to this:
+
+```mermaid
+graph LR;
+  issuer-->holder;
+  holder-->verifier;
+  issuer-->QTSP/QERDS;
+  verifier-->QTSP/QERDS;
+  holder-->QTSP/QERDS;
+```
+
 ## Common Rules for Everyone
 Security, error handling, auditability, portability.
 
