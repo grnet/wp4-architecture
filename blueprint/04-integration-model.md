@@ -10,6 +10,7 @@ Modularity, standardization, versioning.
 
 ### General PID issuing process
 This chapter describes the general PID issuing process in a sequence diagram.
+Todo: Mention ETSI standardization: ETSI TS 119 472-3 for (Q)EAA and PID issuance. ETSI TS 119 476-3 will standardize WUA and WIA.
  
 <!--TODO - how do we make texts like this look nice?-->
 <strong>Description</strong>
