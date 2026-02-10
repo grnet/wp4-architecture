@@ -76,7 +76,7 @@ The following risks need to be addressed:
 
 - QERDS and eDelivery are new subject matter to several wallet providers and implementers.
   They may be tempted to instead mold the well-known OpenID4VC protocols to use cases that are better suited for QERDS.
-  To address this risk, WP4 Architecture group members and in particular Use Case Sync Leads are expected to learn about QERDS and guide the use cases in determining applicability.
+  To address this risk, WP4 Architecture group members and in particular Use Case Sync Leads are expected to learn about QERDS and engage with the WP2/WP3 groups to learn which practical use cases will drive adoption of automation and agent-based flows that are the main motivators for using QERDS in the EBW.
 - The QERDS requires several cross-group implementations.
   To reduce interoperability risks, the WP4 QTSP group should:
     - specify at least two [Conformance Specifications](https://github.com/webuild-consortium/wp4-architecture/blob/main/conformance-specs/README.md) in consultation with stakeholder groups:
