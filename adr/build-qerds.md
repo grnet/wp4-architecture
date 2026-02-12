@@ -92,4 +92,7 @@ Once merged, this is our consortium’s decision. This does not mean all
 participants agree it is the best possible decision. In the decision
 making process, we have heard the following advice.
 
-- 2026-02-03, Andrew Freund, D-Trust, Germany: OK, with processed suggestions regarding detailed requirements and the Interoperability Test Bed.
+- [2026-02-03, Andrew Freund, D-Trust, Germany](https://github.com/webuild-consortium/wp4-architecture/pull/61#pullrequestreview-3744059166): OK, with processed suggestions regarding detailed requirements and the Interoperability Test Bed.
+- [2026-02-11, Alejandro Nieto, DigitelTS, Spain](https://github.com/webuild-consortium/wp4-architecture/pull/61#issuecomment-3885426557): OK, agreed with the proposed standards and protocols.
+- [2026-02-11, Rune Kjørlaug, OpenPeppol, Belgium](https://github.com/webuild-consortium/wp4-architecture/pull/61#pullrequestreview-3785222841): Contributed comments regarding directory functions (parked for a next ADR), AS4 suitability, protocol migrations and avoiding lock-in, co-existence with existing ecosystems like Peppol.
+- [2026-02-12, Giuseppe De Marco, Dipartimento per la trasformazione digitale, Italy](https://github.com/webuild-consortium/wp4-architecture/pull/61#pullrequestreview-3791113532): Recommendation to consider [relying party intermediary architectures](https://github.com/webuild-consortium/wp4-architecture/pull/31) when designing QERDS gateways.
