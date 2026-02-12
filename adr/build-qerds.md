@@ -64,7 +64,7 @@ Testing and piloting with a designated QERDS makes it easier:
 
 - To implement use cases for the EUBW that requires automation and/or agent-based access.
 - To connect with organisations responsible for authentic sources for the retrieval and/or verification of attributes, which is necessary for the issuance of qualified electronic attestations of attributes (see [Feature: Verification of attributes](https://github.com/webuild-consortium/wp4-qtsp-group/blob/main/docs/qeaa/verification.feature.md)).
-- To develop the QERDS aspect of the envisioned EBW ecosystem, using the WE BUILD ecosystem and its Interoperability Test Bed to provide a meaningful and collaborative context.
+- To develop the QERDS aspect of the envisioned EBW ecosystem, building upon existing ecosystems like the Once-Only Technical System and Peppol, using the WE BUILD ecosystem and its Interoperability Test Bed to provide a meaningful and collaborative context.
 
 Open issues:
 
