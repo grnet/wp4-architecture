@@ -9,7 +9,7 @@
 
 The WP4 Architecture group discussed at the [IRL Workshop](https://portal.webuildconsortium.eu/group/architecture/event/irl-workshop) the [draft on eDelivery](https://github.com/webuild-consortium/wp4-architecture/pull/25) for wallet-to-wallet messaging.
 Afterwards, the European Commission published the European Business Wallet (EBW) proposal [COM(2025) 838 final](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0838) that includes a secure communication channel: a designated qualified electronic registered delivery service (QERDS).
-See the definition in [Business Wallet Definition](https://portal.webuildconsortium.eu/group/30/files/6277/collabora-online/edit/2773) (version 2026-01-14).
+See the definition in [Business Wallet Definition](https://portal.webuildconsortium.eu/group/16/files/4810/collabora-online/view/2773) (version 2026-01-14).
 This definition and the WE BUILD approach was discussed during the [Business Wallet Workshop](https://portal.webuildconsortium.eu/group/wallet-providers/event/business-wallet-workshop).
 
 While the QERDS was already part of the WE BUILD Grant Agreement, this record makes it explicit part of the WE BUILD architecture and specifies high-level starting points.
