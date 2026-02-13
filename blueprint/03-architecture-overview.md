@@ -12,6 +12,9 @@ The EU ecosystem for the natural person wallet is described in more detail in [A
 Several sources exist for describing the more general 3rd party model, including ongoing work in the IETF eg [https://datatracker.ietf.org/doc/draft-ietf-spice-vdcarch/]
 
 ## System Landscape
+
+The diagram below illustrates the baseline trust topology of the EU wallet ecosystem. Issuers provide attestations to holders, holders present them to verifiers, and all parties anchor trust decisions against the EU trusted lists defined under ETSI TS 119 612 and ETSI TS 119 604 within the framework of the eIDAS Regulation.
+
 ```mermaid
 graph LR;
   issuer-->holder;
@@ -20,7 +23,8 @@ graph LR;
   verifier-->trust;
   holder-->trust;
 ```
-In the WE BUILD project the focus is primarily on wallets for legal entities. In this case the regulation includes the use of qualified electronic registered delivery services to enable messaging services between entities in the ecosystem. The diagram changes to this:
+
+In the WE BUILD project the focus is primarily on wallets for legal entities. In this case the regulation includes the use of qualified electronic registered delivery services to enable messaging services between entities in the ecosystem. Accordingly, the generic trust anchor is replaced by a Qualified Trust Service Provider operating a Qualified Electronic Registered Delivery Service (QTSP/QERDS), through which issuers, holders, and verifiers route their trust and messaging interactions. The diagram changes to this:
 
 ```mermaid
 graph LR;
@@ -40,5 +44,3 @@ To be authored by Wallet Group. Describes the techn stacks, such as cloud-based 
 To come: [Issue 63](https://github.com/webuild-consortium/wp4-architecture/issues/63) will produce concept model in collaboration with Wallet Group.
 ### The Business Wallet for Economic Operators
 To come: [Issue 63](https://github.com/webuild-consortium/wp4-architecture/issues/63) will produce concept model in collaboration with Wallet Group.
-
-
