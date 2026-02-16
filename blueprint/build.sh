@@ -72,12 +72,12 @@ kramdoc --auto-ids main.md -o main.adoc
 ASCIIDOC_ARGS="-r asciidoctor-diagram -a allow-uri-read -a toc=left --doctype book"
 
 echo "Generating HTML..."
-asciidoctor ${ASCIIDOC_ARGS} main.adoc
+asciidoctor ${ASCIIDOC_ARGS} main.adoc -o blueprint.html
 
 echo "Generating PDF..."
 asciidoctor-pdf ${ASCIIDOC_ARGS} main.adoc --out-file blueprint.pdf
 
 mkdir -p ../build_outputs_folder/blueprint
-cp main.html ../build_outputs_folder/blueprint/index.html
+cp blueprint.html ../build_outputs_folder/blueprint/blueprint.html
 cp *png ../build_outputs_folder/blueprint/
 cp blueprint.pdf ../build_outputs_folder/blueprint/blueprint.pdf
