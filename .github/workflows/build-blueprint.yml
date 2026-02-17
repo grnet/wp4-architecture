@@ -4,11 +4,9 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the following branches
   push:
-    branches: [ "asciidoc" ]
-  # pull_request:
-  #   branches: [ "asciidoc" ]
+    branches: [ "asciidoc", "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,7 +28,7 @@ jobs:
 
       - name: Upload static files
         id: deployment
-        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+        uses: actions/upload-pages-artifact@v3
         with:
           path: build_outputs_folder/
 
