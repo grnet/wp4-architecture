@@ -31,8 +31,6 @@ fi
 
 . .venv/bin/activate
 
-echo '# WE BUILD – Architecture & Integration Blueprint (D4.1)' > main.md
-
 rm -f main-body.md
 cat 01-executive-summary.md >> main-body.md
 echo >> main-body.md
@@ -56,6 +54,8 @@ echo >> main-body.md
 rm -f main-body-enum.md
 markdown-enum main-body.md 1 main-body-enum.md
 
+rm -f main.md
+
 cat main-body-enum.md >> main.md
 
 echo >> main.md
@@ -71,9 +71,16 @@ echo >> main.md
 cat appendix-ebw-definition.md >> main.md
 
 echo "Running kramdoc..."
-kramdoc --auto-ids main.md -o main.adoc
+kramdoc --auto-ids --heading-offset 1 main.md -o main.adoc
 
-ASCIIDOC_ARGS="-r asciidoctor-diagram -a allow-uri-read -a toc=left --doctype book --verbose"
+# Prepend title to fix header level and TOC placement
+TMP_FILE=$(mktemp)
+echo '= WE BUILD -- Architecture & Integration Blueprint (D4.1)' >> ${TMP_FILE}
+echo >> ${TMP_FILE}
+cat main.adoc >> ${TMP_FILE}
+mv ${TMP_FILE} main.adoc
+
+ASCIIDOC_ARGS="-r asciidoctor-diagram -a allow-uri-read -a toc=left --doctype article --verbose"
 
 # Set SVG output mode for Mermaid diagrams
 sed -e 's/\[mermaid\]/[mermaid, format=svg]/g' main.adoc > main-svg.adoc
