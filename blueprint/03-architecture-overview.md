@@ -46,62 +46,89 @@ To be authored by Wallet Group. Describes the techn stacks, such as cloud-based 
 The diagram below provides a concept-level view of the EUDI Wallet ecosystem for natural persons (informative, non-normative).
 
 ```mermaid
-%% fix cropped text in some browsers using "&nbsp;" in various labels
-flowchart LR
-    %% Entities
-    H[Holder]
-    RP[Relying Party]
-    I["Issuer&nbsp;&nbsp;"]
-    R[Role]
-    NP["Natural Person&nbsp;&nbsp;"]
-    LP["Legal Person&nbsp;&nbsp;"]
-    U["User&nbsp;&nbsp;"]
-    PP["PID Provider&nbsp;&nbsp;"]
-    PID["PID&nbsp;&nbsp;"]
-    WIT[Wallet Instance]
-    WIA["WIA/WTE&nbsp;&nbsp;"]
-    WP[Wallet Provider]
-    WIC[Wallet Instance]
-    WS[Wallet Solution]
-    WCC["Wallet Core Component(s)"]
-    WA[Wallet Application]
+%% EUDI Wallet concept model for natural persons
+  flowchart TB
+      %% --- Roles ---
+      subgraph roles ["Roles"]
+          direction LR
+          H["Holder&nbsp;&nbsp;"]
+          RP["Relying Party&nbsp;&nbsp;"]
+          I["Issuer&nbsp;&nbsp;"]
+          R["Role&nbsp;&nbsp;"]
+      end
 
-    %% Relationships
-    H -->|is type of| R
-    RP -->|is type of| R
-    I -->|is type of| R
+      %% --- Users & Identity ---
+      subgraph identity ["Users & Identity"]
+          direction LR
+          U["User&nbsp;&nbsp;"]
+          NP["Natural Person&nbsp;&nbsp;"]
+          LP["Legal Person&nbsp;&nbsp;"]
+          PP["PID Provider&nbsp;&nbsp;"]
+          PID["PID&nbsp;&nbsp;"]
+      end
 
-    I -->|is type of| PP
-    PP -->|"issues&nbsp;"| PID
+      %% --- Wallet Solution ---
+      subgraph solution ["Wallet Solution"]
+          direction LR
+          WP["Wallet Provider&nbsp;&nbsp;"]
+          WS["Wallet Solution&nbsp;&nbsp;"]
+          WCC["Wallet Core Component(s)&nbsp;&nbsp;"]
+          WA["Wallet Application&nbsp;&nbsp;"]
+      end
 
-    R -->|"has&nbsp;"| U
-    U -->|is a| NP
-    U -->|is a| LP
+      %% --- Wallet Runtime ---
+      subgraph runtime ["Wallet Runtime"]
+          direction LR
+          WIC["Wallet Instance&nbsp;&nbsp;"]
+          WIT["Wallet Instance (External)&nbsp;&nbsp;"]
+          WIA["WIA / WTE&nbsp;&nbsp;"]
+      end
 
-    U -->|controls| WIC
-    U -->|authenticated by| PID
-    WIC -->|defines type and validates| PID
+      %% Type relationships (solid)
+      H -->|is type of| R
+      RP -->|is type of| R
+      I -->|is type of| R
+      I -->|is type of| PP
 
-    WIT -->|communicates with| WIC
-    WIA -->|validates| WIC
+      %% User relationships (solid)
+      R -->|has| U
+      U -->|is a| NP
+      U -->|is a| LP
+      U -->|controls| WIC
 
-    WP -->|"issues&nbsp;"| WIA
-    WP -->|provides| WS
+      %% Issuance (solid, thick)
+      PP ==>|issues| PID
+      WP ==>|issues| WIA
+      WP -->|provides| WS
 
-    WIC -->|instance of| WS
+      %% Authentication & validation (dashed)
+      U -.->|authenticated by| PID
+      WIC -.->|defines type and validates| PID
+      WIA -.->|validates| WIC
 
-    WS -->|consists of| WCC
-    WS -->|consists of| WA
+      %% Wallet structure (solid)
+      WIC -->|instance of| WS
+      WS -->|consists of| WCC
+      WS -->|consists of| WA
+      WCC -->|integrates with| WA
 
-    WCC -->|integrates with| WA
+      %% Cross-wallet communication (dotted)
+      WIT -->|communicates with| WIC
 
-    %% Styling to differentiate logical groups
-    classDef greyBox fill:#f4f4f4,stroke:#ccc,stroke-width:1px,color:#333;
-    classDef tanBox fill:#fcecd4,stroke:#b5966a,stroke-width:1px,color:#333;
+      %% Styling
+      classDef primaryRole fill:#fff2cc,stroke:#d6b656,stroke-width:2px,color:#000;
+      classDef component fill:#e1d5e7,stroke:#9673a6,stroke-width:2px,color:#000;
+      classDef walletPart fill:#f8cecc,stroke:#b85450,stroke-width:2px,color:#000;
 
-    class H,RP,I,NP,LP greyBox;
-    class R,U,PP,PID,WIT,WIA,WP,WIC,WS,WCC,WA tanBox;
-```
+      class H,RP,I,NP,LP primaryRole;
+      class R,U,PP,PID component;
+      class WP,WS,WCC,WA,WIC,WIT,WIA walletPart;
+
+      %% Subgraph styling
+      style roles fill:none,stroke:#d6b656,stroke-width:1px,stroke-dasharray: 5 5
+      style identity fill:none,stroke:#9673a6,stroke-width:1px,stroke-dasharray: 5 5
+      style solution fill:none,stroke:#b85450,stroke-width:1px,stroke-dasharray: 5 5
+      style runtime fill:none,stroke:#b85450,stroke-width:1px,stroke-dasharray: 5 5
 
 _Concept diagram for discussion and alignment. Terminology and role labels should be interpreted in line with the EUDIW ARF and the corresponding WE BUILD architecture artefacts._
 
