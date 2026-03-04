@@ -87,6 +87,14 @@ for ADR in $(cat ../adr/README.md | extract_last_parenthesis); do
     cat ../adr/${ADR} | indent_headers | indent_headers >> main.md
 done
 
+# CS appendix, gathers all conformance specifications
+echo >> main.md
+cat appendix-cs.md >> main.md
+for CS in cs-01-credential-issuance.md cs-02-credential-presentation.md; do
+    echo >> main.md
+    cat ../conformance-specs/${CS} | indent_headers | indent_headers >> main.md
+done
+
 echo "Running kramdoc..."
 kramdoc --auto-ids --heading-offset 1 main.md -o main.adoc
 
