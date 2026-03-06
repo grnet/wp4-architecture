@@ -30,4 +30,4 @@ WE BUILD defines rulebooks and credential data schemas for the attestations used
 
 Credential schemas define the structure of credential data and support implementers in producing interoperable credentials and validating that the data follows the agreed format.
 
-The rulebooks are maintained in the [WE BUILD Attestation Rulebooks repository](https://github.com/webuild-consortium/webuild-attestation-rulebooks-catalog/tree/main/rulebooks), including rulebooks for key credentials such as **PID** and **EBWOID**.
+Rulebook descriptions are currently provided by the use cases using a common template and are maintained in the project collaboration portal. As part of the ongoing work to formalise rulebooks and credential schemas, these descriptions are expected to be consolidated in a shared repository such as the [WE BUILD Attestation Rulebooks repository](https://github.com/webuild-consortium/webuild-attestation-rulebooks-catalog/tree/main/rulebooks), including rulebooks for key credentials such as PID and EBWOID.
