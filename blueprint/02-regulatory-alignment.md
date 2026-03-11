@@ -8,7 +8,7 @@ WE BUILD aligns with the legal and technical framework for EUDI wallets. Users c
 
 The amended eIDAS Regulation is supported by several implementing acts defining the technical and governance framework for the EUDI ecosystem, most importantly:
 
-**Core wallet architecture and technical framework**
+**Core Wallet Architecture and Technical framework**
   - [2024/2979 – Integrity and core functionalities](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402979)
   - [2024/2982 – Protocols and interfaces](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402982)
   - [2024/2981 – Certification framework](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402981)
@@ -18,13 +18,13 @@ The amended eIDAS Regulation is supported by several implementing acts defining 
   - [2024/2977 – PID and electronic attestations of attributes](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202402977)
   - [2025/1569 – Electronic attestations of attributes](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202501569)
 
-**Wallet ecosystem governance and relying parties**
+**Wallet Ecosystem Governance and Relying Parties**
   - [2025/848 – Registration of wallet-relying parties](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500848)
   - [2025/849 – Submission of information on certified European Digital Identity Wallets](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500849)
   - [2025/847 – Reactions to Wallet security breaches](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500847)
   - [2025/846 – Cross-border identity matching for natural persons](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500846)
 
-**Trust services and QSCD framework**
+**Trust Services and QSCD Framework**
   - [2025/1566 – Verification of identity and attributes (QTSs)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202501566)
   - [2025/1567 – rQSCD management](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202501567)
   - [2025/1570 – Notification of certified or cancelled QSCDs](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202501570)
@@ -33,7 +33,7 @@ The amended eIDAS Regulation is supported by several implementing acts defining 
 ### Standardization and Technical Specifications
 The European Commission, together with the European Digital Identity Cooperation Group, has published:
 
-- The [ARF](https://eudi.dev/latest/architecture-and-reference-framework-main/) specifies main functionalities, roles and responsibilities, architecture and design principles, attestation formats and protocols, trust model, certification, and risk management of the EUDI Wallet ecosystem.
+- The [ARF](https://eudi.dev/latest/architecture-and-reference-framework-main/) specify main functionalities, roles and responsibilities, architecture and design principles, attestation formats and protocols, trust model, certification, and risk management of the EUDI Wallet ecosystem.
 - The [Technical Specifications](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/tree/main/docs/technical-specifications) specifies more technical details of selected topics derived from the ARF. The technical specifications describe various topics such as Relying Party registrations, zero-knowledge proofs, attestation rulebooks, schemas and catalogues.
 
 Furthermore, there are several standardization organizations that contribute with standards for the EUDIW ecosystem.
@@ -56,12 +56,7 @@ The EBW framework complements the EUDI framework by addressing the needs of econ
 
 The proposal supports the management and use of EAA, including owner identification data with selective disclosure. It defines requirements for authenticating owners and authorised users through (Q)EAAs and enables links between EAAs and other attestations. Access to EAAs by relying parties requires proper authorisation.
 
-The framework also relies on existing eIDAS trust services, including:
-
-- Qualified Electronic Signatures (QES)  
-- Qualified Electronic Seals (QESeals)  
-- Qualified Electronic Time Stamps  
-- Qualified Electronic Registered Delivery Services (QERDS) for secure transmission of electronic documents and data  
+The framework relies on existing eIDAS trust services such as qualified electronic signatures, seals, timestamps and registered delivery services.
 
 The proposal also introduces a European Digital Directory maintained by the Commission. The directory functions as a trusted internal system where EBW providers notify relevant service information and where digital addressing can be supported. Detailed requirements will be defined in future implementing acts.
 
