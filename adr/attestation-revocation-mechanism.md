@@ -1,4 +1,4 @@
-# Revocation Mechanism
+# Attestation Revocation Mechanism
 
 **Authors:**
 
@@ -11,7 +11,7 @@
 
 Revocation is the process by which an attestation (including PID/EBWOID) is invalidated before its natural expiry so that it can no longer be trusted or used. While short-lived attestations (expiring in 24 hours or less) do not require revocation, long-term attestations need a standardized mechanism to handle invalidation due to reasons such as lost devices, data inaccuracy, or regulatory changes.
 
-The architecture must ensure that the revocation status check preserves the privacy of the Wallet Holder (herd privacy) and allows for scalable implementation,. Additionally, the solution must align with the OpenID4VC HAIP 1.0 specifications.
+The architecture must ensure that the revocation status check preserves the privacy of the Wallet Holder (herd privacy) and allows for scalable implementation. Additionally, the solution must align with the OpenID4VC HAIP 1.0 specifications.
 
 ## Decision
 
@@ -25,7 +25,7 @@ The WE BUILD project adopts the [IETF Token Status List](https://datatracker.iet
 
 ### More Difficult:
 * To ensure performance and privacy, Issuers must implement complex state management. One way to do it is to pre-allocate random indices in batches, rather than simple sequential generation.
-* As Issuers have the sole right to revoke PIDs/EBWOIDs, Authentic Sources and Issuers must establish protocols to notify the Issuer of events requiring revocation (e.g., data changes or lost devices), as they cannot revoke the attestation directly.
+* As Issuers have the sole right to revoke PIDs/EBWOIDs, Authentic Sources and Issuers must establish protocols to notify the Issuer of events requiring revocation (e.g., data changes or lost devices), as they cannot directly revoke an attestation.
 
 ### Risks:
 *  Offline verification scenarios require Relying Parties to cache revocation lists. To address this, Issuers should include expiration dates and time-to-live (TTL) in revocation info to drive caching decisions.
