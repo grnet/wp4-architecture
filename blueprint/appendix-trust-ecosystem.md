@@ -152,6 +152,8 @@ According to the [EUDI Wallet ARF v2.8](https://eudi.dev/), when present and app
 - **Access certificates** are issued by the Access Certificate Authority to registered PID Providers, Attestation Providers, and Relying Parties. Issuance SHALL comply with **ETSI TS 119 411-8**; the Authority SHALL comply with at least **ETSI EN 319 411-1** Normalised Certificate Policy (NCP) requirements. Each Relying Party receives a **separate access certificate per Relying Party Instance**. Access certificates authenticate entities in protocol exchanges and are validated by Wallet Units using the trust anchors in the Access CA LoTE entries.
 - **Registration certificates** (optional) may be issued by the Provider of Registration Certificates to detail registration status and entitlements. When the User opts to verify RP (or issuer) registration, Wallet Units use the registration certificate when provided and/or registry lookup, as specified in ARF RPRC_16 to RPRC_21.
 
+For reference on relying party access certificates and relying party registration certificates, see the [RPAC/RPRC documentation](#rpacrprc-documentation).
+
 ### Key lifecycle and Trusted Lists
 
 Key lifecycle for trust anchors and for services listed in Trusted Lists is reflected in list content and status (e.g. service status, status determination approach, and history where required by the profile). Updates and revocation of listed services follow the applicable ETSI trusted list profiles (TS 119 612 / TS 119 602) and are consumed per ETSI TS 119 615. Certificate policies and Certificate Transparency (SCT) where applicable are specified in the referenced ETSI standards.

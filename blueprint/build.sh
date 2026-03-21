@@ -51,8 +51,8 @@ function collect_qtsp_appendix() {
     QTSP_MD=$(realpath appendix-qtsp.md)
     pushd wp4-qtsp-group-main/docs
     echo '# Appendix F. QTSP documentation' >> ${QTSP_MD}
-    # echo >> ${QTSP_MD}
-    # echo 'This is documentation of the [WE BUILD: WP4 QTSP group](../README.md).' >> ${QTSP_MD}
+    echo >> ${QTSP_MD}
+    echo 'The WP4 QTSP group collaborates on [internal reference code and documentation](https://github.com/webuild-consortium/wp4-qtsp-group) to increase interoperability. This appendix lists the entry points for this reference documentation by each provided service.' >> ${QTSP_MD}
     for README in qes/README.md qeaa/README.md qerds/README.md rwscd/README.md rpac-rprc/README.md; do
 	echo >> ${QTSP_MD}
 	cat ${README} | indent_headers >> ${QTSP_MD}
